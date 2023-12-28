@@ -2,7 +2,6 @@
 
 var licenses = []
   .concat(require('spdx-license-ids'))
-  .concat(require('spdx-license-ids/deprecated'))
 var exceptions = require('spdx-exceptions')
 
 module.exports = function (source) {

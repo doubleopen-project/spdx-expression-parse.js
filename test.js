@@ -84,9 +84,9 @@ it('parses `AND`, `OR` and `WITH` with the correct precedence', function () {
 
 it('allows mixed-case `and`, `or`, and `with`', function () {
   var variants = [
-    'MIT and BSD-3-Clause or GPL-2.0 with GCC-exception-2.0',
-    'MIT aNd BSD-3-Clause oR GPL-2.0 wITh GCC-exception-2.0',
-    'MIT AnD BSD-3-Clause Or GPL-2.0 WitH GCC-exception-2.0'
+    'MIT and BSD-3-Clause or GPL-2.0-only with GCC-exception-2.0',
+    'MIT aNd BSD-3-Clause oR GPL-2.0-only wITh GCC-exception-2.0',
+    'MIT AnD BSD-3-Clause Or GPL-2.0-only WitH GCC-exception-2.0'
   ]
   var result = {
     left: {
@@ -96,7 +96,7 @@ it('allows mixed-case `and`, `or`, and `with`', function () {
     },
     conjunction: 'or',
     right: {
-      license: 'GPL-2.0',
+      license: 'GPL-2.0-only',
       exception: 'GCC-exception-2.0'
     }
   }
