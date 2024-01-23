@@ -121,7 +121,8 @@ module.exports = function (source) {
     var token = parseToken()
     if (!token) {
       throw new Error('Unexpected `' + source[index] +
-                      '` at offset ' + index)
+                      '` at offset ' + index +
+                      ' in expression `' + source.slice(index, index + 20) + '`')
     }
 
     tokens.push(token)
